@@ -51,14 +51,14 @@ export class APIClient {
 
   // Auth
   async login(email: string, senha: string) {
-    return this.request('/auth/login', {
+    return this.request('/admin/login', {
       method: 'POST',
       body: JSON.stringify({ email, senha }),
     });
   }
 
   async register(data: { nome: string; email: string; senha: string }) {
-    return this.request('/auth/register', {
+    return this.request('/admin/register', {
       method: 'POST',
       body: JSON.stringify(data),
     });
